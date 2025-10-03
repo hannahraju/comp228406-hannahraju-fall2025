@@ -21,6 +21,7 @@ public class Lotto {
         return this.numbers;
     }
 
+    // Simulate 5 rolls and sums each roll, if the sum matches the user's input, the user wins
     public void playLotto() {
         int input = Integer.valueOf(JOptionPane.showInputDialog("Please input a number between 3 and 27 (inclusive)"));
 

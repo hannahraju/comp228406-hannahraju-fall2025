@@ -11,7 +11,7 @@ public class Test {
     public static String[] answerkey;
     public static int numCorrect;
 
-    //constructor
+    // Constructor Test defines the instance variables of Test
     public Test() {
         numQuestions = 4;
         questions = new String[numQuestions];
@@ -21,10 +21,10 @@ public class Test {
 
     // simulateQuestions() method simulates the 5 multiple choice questions
     private static void simulateQuestions() {
-        questions[0] = "What is the correct way to format an output to the terminal?\na) System.out.printf( \"Sum is %d%n\", sum);\nb) System.out.printf(\"Sum is %i%n\", sum)\nc) System.out.println( \"Sum is %d%n\", sum)\nd) System.out.println( \"Sum is %i%n\", sum);";
+        questions[0] = "What is the correct way to format an output to the terminal?\na) System.out.printf( \"Sum is %d%n\", sum);\nb) System.out.printf(\"Sum is %i%n\", sum);\nc) System.out.println( \"Sum is %d%n\", sum);\nd) System.out.println( \"Sum is %i%n\", sum);";
         questions[1] = "Class, method, and variable names are all examples of:\na) constructors\nb) identifiers\nc) declarations\nd) definitions";
         questions[2] = "Which of the following is an example of using a \"getter\":\na) this.Name()\nb) name = getName(person)\nc) person.getName() \nd) name = this.name(person)";
-        questions[3] = "What is an example of method overloading?\na) Calling a function using too many parameters\nb) A method returns more than one value]\nc) Your programs gets stuck in an infinite loop\nd) Building a class with multiple constructors";
+        questions[3] = "What is an example of method overloading?\na) Calling a function using too many parameters\nb) A method returns more than one value\nc) Your programs gets stuck in an infinite loop\nd) Building a class with multiple constructors";
         answerkey = new String[]{"a", "b", "c", "d"};
 
     }
