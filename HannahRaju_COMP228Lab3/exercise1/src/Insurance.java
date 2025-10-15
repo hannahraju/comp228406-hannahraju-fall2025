@@ -1,6 +1,14 @@
+/*
+    Name: Hannah Raju
+    ID: 301543568
+    Date: October 14, 2025
+    Info: COMP 228 Lab 3 Exercise 1 - Insurance.java
+*/
 
+// This class implements the abstract class Insurance
 public abstract class Insurance {
 
+    // declare instance variables type and monthly cost
     public String type;
     public double monthlyCost;
 

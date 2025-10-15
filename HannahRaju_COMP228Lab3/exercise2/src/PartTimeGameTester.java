@@ -1,3 +1,9 @@
+/*
+    Name: Hannah Raju
+    ID: 301543568
+    Date: October 14, 2025
+    Info: COMP 228 Lab 3 Exercise 2 - PartTimeGameTester.java
+*/
 import javax.swing.JOptionPane;
 
 public class PartTimeGameTester extends GameTester {
