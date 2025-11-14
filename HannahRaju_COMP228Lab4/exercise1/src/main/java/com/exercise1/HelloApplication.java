@@ -38,20 +38,34 @@ public class HelloApplication extends Application {
         GridPane info = new GridPane();
         info.setPadding(new Insets(5, 5, 5, 5));
         pane.setLeft(info);
+
         info.add(new Label("Name:"), 0, 0);
-        info.add(new TextField(), 1, 0);
+        TextField name = new TextField();
+        info.add(name, 1, 0);
+
         info.add(new Label("Address:"), 0, 1);
-        info.add(new TextField(), 1, 1);
+        TextField address = new TextField();
+        info.add(address, 1, 1);
+
         info.add(new Label("Province:"), 0, 2);
-        info.add(new TextField(), 1, 2);
+        TextField province = new TextField();
+        info.add(province, 1, 2);
+
         info.add(new Label("City:"), 0, 3);
-        info.add(new TextField(), 1, 3);
+        TextField city = new TextField();
+        info.add(city, 1, 3);
+
         info.add(new Label("Postal Code:"), 0, 4);
-        info.add(new TextField(), 1, 4);
+        TextField postalcode = new TextField();
+        info.add(postalcode, 1, 4);
+
         info.add(new Label("Phone Number:"), 0, 5);
-        info.add(new TextField(), 1, 5);
+        TextField phone = new TextField();
+        info.add(phone, 1, 5);
+
         info.add(new Label("Email:"), 0, 6);
-        info.add(new TextField(), 1, 6);
+        TextField email = new TextField();
+        info.add(email, 1, 6);
 
         // add checkboxes for extracurriculars
         VBox extracurriculars = new VBox();
@@ -85,14 +99,14 @@ public class HelloApplication extends Application {
 
         pane.setRight(right);
 
-        // create submit button
+        // create display button
         VBox bottom = new VBox();
         bottom.setAlignment(Pos.CENTER);
         Button btDisp = new Button("Display");
         bottom.getChildren().add(btDisp);
 
         // add text field
-        TextField output = new TextField();
+        TextArea output = new TextArea();
         bottom.getChildren().add(output);
         pane.setBottom(bottom);
 
@@ -112,9 +126,29 @@ public class HelloApplication extends Application {
             }
         });
 
+        // handle event for display button clicked
+        btDisp.setOnAction(event->{
+            String infoString = name.getText()+", "+address.getText()+", "+province.getText()+", "+postalcode.getText()+", "+phone.getText()+", "+email.getText()+"\n";
+            RadioButton selectedButton = (RadioButton) buttongroup.getSelectedToggle();
+            String majorString = "\nMajor:\n"+selectedButton.getText()+"\n";
+            String coursesString = "\nCourses:\n";
+            for(String course: selected) {
+                coursesString+= course+"\n";
+            }
+            String extraString = "\nExtracurriculars:\n";
+            if(cb1.isSelected()){
+                extraString+=cb1.getText()+"\n";
+            }
+            if(cb2.isSelected()){
+                extraString+=cb2.getText();
+            }
+
+            output.setText(infoString+majorString+coursesString+extraString);
+        });
+
         // Create a scene and place it in the stage
         Scene scene = new Scene(pane);
-        stage.setTitle("ShowGridPane"); // Set the stage title
+        stage.setTitle("Lab 4 Exercise 1"); // Set the stage title
         stage.setScene(scene); // Place the scene in the stage
         stage.show(); // Display the stage
     }
