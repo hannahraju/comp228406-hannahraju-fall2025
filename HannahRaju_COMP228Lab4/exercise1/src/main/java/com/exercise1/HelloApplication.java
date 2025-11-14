@@ -128,14 +128,14 @@ public class HelloApplication extends Application {
 
         // handle event for display button clicked
         btDisp.setOnAction(event->{
-            String infoString = name.getText()+", "+address.getText()+", "+province.getText()+", "+postalcode.getText()+", "+phone.getText()+", "+email.getText()+"\n";
+            String infoString = name.getText()+", "+address.getText()+", "+province.getText()+", "+postalcode.getText()+", "+phone.getText()+", "+email.getText()+"";
             RadioButton selectedButton = (RadioButton) buttongroup.getSelectedToggle();
-            String majorString = "\nMajor:\n"+selectedButton.getText()+"\n";
-            String coursesString = "\nCourses:\n";
+            String majorString = "\nMAJOR:\n"+selectedButton.getText()+"";
+            String coursesString = "\nCOURSES:\n";
             for(String course: selected) {
                 coursesString+= course+"\n";
             }
-            String extraString = "\nExtracurriculars:\n";
+            String extraString = "EXTRACURRICULARS:\n";
             if(cb1.isSelected()){
                 extraString+=cb1.getText()+"\n";
             }
