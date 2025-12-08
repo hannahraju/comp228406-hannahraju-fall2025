@@ -1,5 +1,7 @@
-com\exercise1\Launcher.class
-com\exercise1\PostgreSQLManager.class
 module-info.class
 com\exercise1\HelloApplication.class
+com\exercise1\Launcher.class
+com\exercise1\PostgreSQLManager.class
+com\exercise1\PlayerInfo.class
+com\exercise1\GameInfo.class
 com\exercise1\HelloController.class
