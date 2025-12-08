@@ -1,3 +1,12 @@
+/*
+ * @author Hannah Raju
+ * @date December 7, 2025
+ * @info COMP 228 Lab Assignment 5
+ * @filename GameInfo.java
+ *
+ * This class acts as the Model for Game
+ */
+
 package com.exercise1;
 
 import java.sql.Date;

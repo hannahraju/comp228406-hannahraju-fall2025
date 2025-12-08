@@ -1,3 +1,12 @@
+/*
+* @author Hannah Raju
+* @date December 7, 2025
+* @info COMP 228 Lab Assignment 5
+* @filename HelloApplication.java
+*
+* This class acts as this applications View module.
+ */
+
 package com.exercise1;
 
 import javafx.application.Application;

@@ -1,3 +1,12 @@
+/*
+ * @author Hannah Raju
+ * @date December 7, 2025
+ * @info COMP 228 Lab Assignment 5
+ * @filename HelloController.java
+ *
+ * This class acts as the application's Controller
+ */
+
 package com.exercise1;
 
 import javafx.fxml.FXML;

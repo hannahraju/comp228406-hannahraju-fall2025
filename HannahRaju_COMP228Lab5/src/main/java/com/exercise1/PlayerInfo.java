@@ -1,5 +1,13 @@
-package com.exercise1;
+/*
+ * @author Hannah Raju
+ * @date December 7, 2025
+ * @info COMP 228 Lab Assignment 5
+ * @filename PlayerInfo.java
+ *
+ * This class acts as the Model for Player
+ */
 
+package com.exercise1;
 
 public class PlayerInfo {
 

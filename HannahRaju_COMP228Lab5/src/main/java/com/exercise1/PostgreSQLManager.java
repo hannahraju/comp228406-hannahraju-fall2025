@@ -1,3 +1,12 @@
+/*
+ * @author Hannah Raju
+ * @date December 7, 2025
+ * @info COMP 228 Lab Assignment 5
+ * @filename PostgreSQLManager.java
+ *
+ * This class handles interactions with the database
+ */
+
 package com.exercise1;
 
 import java.sql.*;
@@ -17,20 +26,31 @@ public class PostgreSQLManager {
     private final String connectionURL;
 
 
+    /*
+     * @FUNCTION PostgreSQLManager - this function constructs an instance of the PostgreSQLManager object
+     *
+     * @param url: the database url
+     * @param port: the database port
+     * @param dbName: the database name
+     * @param user: the username associated with the database
+     * @param password: the password to access the database
+     *
+     */
     public PostgreSQLManager(String url, int port, String dbName, String user, String password) {
         this.connectionURL = "jdbc:postgresql://" + url + ":" + port + "/" + dbName + "?user=" + user + "&password=" + password;
     }
 
     /*
-    public PostgreSQLManager(String connectionURL){
-        this.connectionURL = connectionURL;
-    }
-    */
+    * @FUNCTION connect() - this function uses the connectionURL to connect to the database
+    *
+    * @returns a connect() object to manage database interactions/
+     */
     public Connection connect() throws SQLException {
         return DriverManager.getConnection(connectionURL);
     }
 
     /*
+     * @FUNCTION addPlayer
      * Add new entries to the Player table.
      *
      * This function takes six variables containing player information and creates a new entry in the Player table.
